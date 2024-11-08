@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MobiHive.KrediHesaplamaPage"
+             Title="Kredi Hesaplama">
+
+    <ScrollView>
+        <StackLayout Padding="20" Spacing="15">
+            <!-- الصورة العلوية لعملية حساب القرض -->
+            <Image Source="kredi_hesaplama.gif" 
+                   Aspect="AspectFit" 
+                   HorizontalOptions="Center" 
+                   VerticalOptions="Center" 
+                   HeightRequest="150" />
+
+            <!-- اختيار نوع القرض -->
+            <Label Text="Kredi Türü" FontSize="18" />
+            <Picker x:Name="KrediTypePicker" Title="Kredi Türü Seçin">
+                <Picker.Items>
+                    <x:String>İhtiyaç Kredisi</x:String>
+                    <x:String>Konut Kredisi</x:String>
+                    <x:String>Taşıt Kredisi</x:String>
+                    <x:String>Ticari Kredisi</x:String>
+                </Picker.Items>
+            </Picker>
+
+            <!-- المبلغ -->
+            <Label Text="Kredi Tutarı (USD)" FontSize="18" />
+            <Entry x:Name="KrediTutarEntry" Keyboard="Numeric" Placeholder="Miktar giriniz" />
+
+            <!-- نسبة الفائدة -->
+            <Label Text="Faiz Oranı (%)" FontSize="18" />
+            <Entry x:Name="FaizOraniEntry" Keyboard="Numeric" Placeholder="Faiz oranı giriniz" />
+
+            <!-- مدة القرض (بالشهور) -->
+            <Label Text="Vade (Ay)" FontSize="18" />
+            <Entry x:Name="VadeEntry" Keyboard="Numeric" Placeholder="Vade giriniz" />
+
+            <!-- زر الحساب -->
+            <Button Text="Hesapla" Clicked="OnCalculateClicked" />
+
+            <!-- النتائج -->
+            <Label x:Name="AylikTaksitLabel" FontSize="18" TextColor="Black" />
+            <Label x:Name="ToplamOdemeLabel" FontSize="18" TextColor="Black" />
+            <Label x:Name="ToplamFaizLabel" FontSize="18" TextColor="Black" />
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

@@ -1,0 +1,28 @@
+<Shell xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+       xmlns:local="clr-namespace:MobiHive"
+       x:Class="MobiHive.AppShell">
+
+    <FlyoutItem Title="Ana Sayfa" Icon="home_icon.png">
+        <ShellContent ContentTemplate="{DataTemplate local:MainPage}" />
+    </FlyoutItem>
+
+    
+
+    <FlyoutItem Title="Vücut Kitle İndeksi" Icon="bmi_icon.png">
+        <ShellContent ContentTemplate="{DataTemplate local:VucutKitleIndeksi}" />
+    </FlyoutItem>
+
+    <FlyoutItem Title="Kredi Hesaplama" Icon="kredi_icon.png">
+        <ShellContent ContentTemplate="{DataTemplate local:KrediHesaplamaPage}" />
+    </FlyoutItem>
+
+    <FlyoutItem Title="Renk Seçimi" Icon="color_icon.png">
+        <ShellContent ContentTemplate="{DataTemplate local:RenkSecimiPage}" />
+    </FlyoutItem>
+
+    <FlyoutItem Title="Yapılacaklar Listesi" Icon="task_icon.png">
+        <ShellContent ContentTemplate="{DataTemplate local:YapilacaklarListesiPage}" />
+    </FlyoutItem>
+
+</Shell>

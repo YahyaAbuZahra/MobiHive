@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MobiHive.VucutKitleIndeksi"
+             Title="Vücut Kitle İndeksi">
+    <StackLayout Padding="20" Spacing="15">
+        <!-- عنوان الصفحة -->
+        <Label Text="Vücut Kitle İndeksi Hesaplama" FontSize="24" HorizontalOptions="Center" />
+
+        <!-- إدخال الطول مع شريط تمرير -->
+        <StackLayout Orientation="Horizontal" VerticalOptions="CenterAndExpand">
+            <Label Text="Boyunuz (cm):" VerticalOptions="Center" />
+            <Entry x:Name="HeightEntry" WidthRequest="60" Keyboard="Numeric" 
+                   TextChanged="OnHeightEntryChanged" />
+            <Slider x:Name="HeightSlider" Minimum="50" Maximum="250" ValueChanged="OnHeightSliderChanged"
+                    VerticalOptions="Center" WidthRequest="300" />
+        </StackLayout>
+
+        <!-- إدخال الوزن مع شريط تمرير -->
+        <StackLayout Orientation="Horizontal" VerticalOptions="CenterAndExpand">
+            <Label Text="Kilonuz (KG):" VerticalOptions="Center" />
+            <Entry x:Name="WeightEntry" WidthRequest="60" Keyboard="Numeric" 
+                   TextChanged="OnWeightEntryChanged" />
+            <Slider x:Name="WeightSlider" Minimum="30" Maximum="200" ValueChanged="OnWeightSliderChanged"
+                    VerticalOptions="Center" WidthRequest="300" />
+        </StackLayout>
+
+        <!-- زر حساب BMI -->
+        <Button Text="Hesapla" Clicked="OnCalculateButtonClicked" Margin="0,20"/>
+
+        <!-- عرض نتيجة BMI -->
+        <Label x:Name="BMIResultLabel" FontSize="18" TextColor="Black" HorizontalOptions="Center" />
+
+        <!-- صورة ونص التوجيه -->
+        <Image x:Name="BMIImage" HorizontalOptions="Center" HeightRequest="200" Margin="0,20"/>
+        <Label x:Name="AdviceLabel" FontSize="16" TextColor="Gray" HorizontalOptions="Center" />
+    </StackLayout>
+</ContentPage>

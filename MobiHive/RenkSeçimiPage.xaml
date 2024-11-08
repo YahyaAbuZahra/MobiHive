@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MobiHive.RenkSecimiPage"
+             Title="Renk Seçimi">
+
+    <StackLayout Padding="20" Spacing="15">
+
+        <!-- تدرج الأحمر -->
+        <Label Text="Kırmızı Ton" FontSize="18" TextColor="Red" />
+        <Slider x:Name="RedSlider" Minimum="0" Maximum="255" ValueChanged="OnColorSliderChanged" />
+
+        <!-- تدرج الأزرق -->
+        <Label Text="Mavi Ton" FontSize="18" TextColor="Blue" />
+        <Slider x:Name="BlueSlider" Minimum="0" Maximum="255" ValueChanged="OnColorSliderChanged" />
+
+        <!-- تدرج الأخضر -->
+        <Label Text="Yeşil Ton" FontSize="18" TextColor="Green" />
+        <Slider x:Name="GreenSlider" Minimum="0" Maximum="255" ValueChanged="OnColorSliderChanged" />
+
+        <!-- عرض الكود اللوني -->
+        <Frame x:Name="ColorDisplayFrame" Padding="20" CornerRadius="10" HeightRequest="100" VerticalOptions="Center">
+            <Label x:Name="ColorCodeLabel" Text="Renk Kodu: #000000" FontSize="18" HorizontalOptions="Center" VerticalOptions="Center" TextColor="White"/>
+        </Frame>
+
+    </StackLayout>
+</ContentPage>
